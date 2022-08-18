@@ -15,16 +15,16 @@
     <div id="main">
         <div id="main-column">
             <div id="menu">
-                <h2 class="menu-item">create</h2>
-                <h2 class="menu-item">search</h2>
-                <h2 class="menu-item">readme</h2>
+                <h2 class="menu-item"><a th:href="@{/}">create</a></h2>
+                <h2 class="menu-item"><a th:href="@{/}">search</a></h2>
+                <h2 class="menu-item"><a th:href="@{/readme}">readme</a></h2>
             </div>
             <div id="news-popular-panels">
                 <div id="news-panel">
                     <h2 id="news-panel-title">news</h2>
                     <div id="news-topics-list" th:each="newsTopic : ${newsTopics}">
                         <div class="news-topic">
-                            <h2 class="news-topic-title" th:text="${newsTopic.title}"></h2>
+                            <h2 class="news-topic-title" th:text="'$> ' + ${newsTopic.title}"></h2>
                             <p class="news-topic-desc" th:text="${newsTopic.description}"></p>
                             <p class="news-topic-timestamp" th:text="${newsTopic.timestamp}"></p>
                         </div>

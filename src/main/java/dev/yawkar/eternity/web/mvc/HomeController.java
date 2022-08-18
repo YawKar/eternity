@@ -32,11 +32,16 @@ public class HomeController {
     }
 
     @GetMapping
-    String homepage(Model model) {
+    String homePage(Model model) {
         List<NewsTopicDTO> newsTopics = newsTopicService.getAllNewsSortedByTime().stream().map(newsMapper::toDTO).toList();
         model.addAttribute("newsTopics", newsTopics);
         List<ThreadTopicDTO> threadTopics = threadTopicService.get10TopicsSortedByMessagesNumber().stream().map(threadMapper::toDTO).toList();
         model.addAttribute("popularThreads", threadTopics);
         return "homepage";
+    }
+
+    @GetMapping("/readme")
+    String readmePage() {
+        return "readme";
     }
 }
