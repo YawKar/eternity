@@ -124,3 +124,29 @@ body {
     margin-left: 1vw;
     color: #9E9E9E
 }
+
+#thread-topics-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thread-topic {
+    width: 100%;
+    border: 2px solid #fafafa;
+    padding-bottom: 1vh;
+}
+
+.thread-topic-title {
+    margin-left: 1vw;
+}
+
+.thread-topic-desc {
+    margin-left: 1vw;
+}
+
+.thread-topic-messages {
+    margin-left: 1vw;
+    color: #9E9E9E
+}

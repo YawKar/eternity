@@ -24,14 +24,21 @@
                     <h2 id="news-panel-title">news</h2>
                     <div id="news-topics-list" th:each="newsTopic : ${newsTopics}">
                         <div class="news-topic">
-                            <h2 class="news-topic-title" th:text="${newsTopic.title}">$> ERROR_TITLE</h2>
-                            <p class="news-topic-desc" th:text="${newsTopic.description}">ERROR_DESCRIPTION</p>
+                            <h2 class="news-topic-title" th:text="${newsTopic.title}"></h2>
+                            <p class="news-topic-desc" th:text="${newsTopic.description}"></p>
                             <p class="news-topic-timestamp" th:text="${newsTopic.timestamp}"></p>
                         </div>
                     </div>
                 </div>
                 <div id="popular-panel">
                     <h2 id="popular-panel-title">popular threads</h2>
+                    <div id="thread-topics-list" th:each="thread : ${popularThreads}">
+                        <div class="thread-topic">
+                            <h2 class="thread-topic-title" th:text="${thread.title}"></h2>
+                            <p class="thread-topic-desc" th:text="${thread.description}"></p>
+                            <p class="thread-topic-messages" th:text="'Messages: ' + ${thread.messagesNumber}"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
