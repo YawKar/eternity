@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${thread.getTitle()}"></title>
+    <link rel="stylesheet" th:href="@{/styles/eternity_style.css}"/>
+</head>
+<body>
+<div id="header">
+    <div id="header-column">
+        <a th:href="@{/}"><img id="logo" th:src="@{/media/logo.webp}"/></a>
+        <h1 id="text-logo">Eternity</h1>
+    </div>
+</div>
+<div id="main">
+    <div id="main-column">
+        <div id="menu">
+            <h2 class="menu-item"><a th:href="@{/}">home</a></h2>
+            <h2 class="menu-item"><a th:href="@{/thread/{threadId}(threadId=${thread.getId()})}">chat</a></h2>
+            <h2 class="menu-item"><a th:href="@{/thread/{threadId}/info(threadId=${thread.getId()})}">info</a></h2>
+        </div>
+        <dib id="about-panel">
+            <h2 id="about-panel-title">about</h2>
+            <div id="about-topics-list">
+                <div class="about-topic">
+                    <h2 class="about-topic-title">$> whatis eternity</h2>
+                    <p class="about-topic-desc">eternity is anonymous thread-based social platform</p>
+                </div>
+                <div class="about-topic">
+                    <h2 class="about-topic-title">$> whois eternity author</h2>
+                    <p class="about-topic-desc"><a th:href="@{https://github.com/YawKar}" target="_blank">GitHub: @yawkar</a></p>
+                </div>
+                <div class="about-topic">
+                    <h2 class="about-topic-title">$> whatis eternity --verbose</h2>
+                    <p class="about-topic-desc">tech stack:</p>
+                    <ul id="tech-stack-list">
+                        <li>Java 17</li>
+                        <li>JavaScript</li>
+                        <li>Spring Boot 2.7.2</li>
+                        <li>Spring Data JPA</li>
+                        <li>Spring Web MVC</li>
+                        <li>Bean Validation</li>
+                        <li>Thymeleaf</li>
+                        <li>Lombok</li>
+                        <li>PostgreSQL 14.5</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </dib>
+    </div>
+</div>
+</body>
+</html>
