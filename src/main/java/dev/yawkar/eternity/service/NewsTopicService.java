@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class NewsService {
+public class NewsTopicService {
 
     private final NewsTopicRepository repository;
 
-    public NewsService(NewsTopicRepository repository) {
+    public NewsTopicService(NewsTopicRepository repository) {
         this.repository = repository;
     }
 
