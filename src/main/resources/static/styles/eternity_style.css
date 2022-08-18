@@ -15,11 +15,11 @@ https://material.io/design/color/the-color-system.html#tools-for-picking-colors
 }
 
 p {
-    font-size: 18px;
+    font-size: 22px;
 }
 
 li {
-    font-size: 18px;
+    font-size: 22px;
 }
 
 body {
@@ -159,6 +159,9 @@ a, a:hover, a:focus, a:active {
 
 .news-topic-desc {
     margin-left: 1vw;
+}
+
+.about-topic-desc {
 }
 
 .news-topic-timestamp {

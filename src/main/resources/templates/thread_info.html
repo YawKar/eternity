@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${thread.getTitle()} + ':info'"></title>
+    <link rel="stylesheet" th:href="@{/styles/eternity_style.css}"/>
+</head>
+<body>
+<div id="header">
+    <div id="header-column">
+        <a th:href="@{/}"><img id="logo" th:src="@{/media/logo.webp}"/></a>
+        <h1 id="text-logo">Eternity</h1>
+    </div>
+</div>
+<div id="main">
+    <div id="main-column">
+        <div id="menu">
+            <h2 class="menu-item"><a th:href="@{/}">home</a></h2>
+            <h2 class="menu-item"><a th:href="@{/thread/{threadId}(threadId=${thread.getId()})}">chat</a></h2>
+            <h2 class="menu-item"><a th:href="@{/thread/{threadId}/info(threadId=${thread.getId()})}">info</a></h2>
+        </div>
+        <div id="about-panel">
+            <h2 id="about-panel-title">thread info</h2>
+            <div id="about-topics-list">
+                <div class="about-topic">
+                    <h2 class="about-topic-title" th:text="'$> cat \'' + ${thread.getTitle()} + '\'.thread'"></h2>
+                    <p class="about-topic-desc" th:inline="text">
+                        # title:    [[${thread.getTitle()}]]<br>
+                        # desc:     [[${thread.getDescription()}]]<br>
+                        # messages: [[${thread.getMessagesNumber()}]]
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
