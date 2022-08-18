@@ -15,9 +15,24 @@
     <div id="main">
         <div id="main-column">
             <div id="menu">
-                <h3 class="menu-item">Create</h3>
-                <h3 class="menu-item">Search</h3>
-                <h3 class="menu-item">Readme</h3>
+                <h2 class="menu-item">create</h2>
+                <h2 class="menu-item">search</h2>
+                <h2 class="menu-item">readme</h2>
+            </div>
+            <div id="news-popular-panels">
+                <div id="news-panel">
+                    <h2 id="news-panel-title">news</h2>
+                    <div id="news-topics-list" th:each="newsTopic : ${newsTopics}">
+                        <div class="news-topic">
+                            <h2 class="news-topic-title" th:text="${newsTopic.title}">$> ERROR_TITLE</h2>
+                            <p class="news-topic-desc" th:text="${newsTopic.description}">ERROR_DESCRIPTION</p>
+                            <p class="news-topic-timestamp" th:text="${newsTopic.timestamp}"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="popular-panel">
+                    <h2 id="popular-panel-title">popular threads</h2>
+                </div>
             </div>
         </div>
     </div>
