@@ -6,7 +6,21 @@
     <link rel="stylesheet" th:href="@{/styles/eternity_style.css}"/>
 </head>
 <body>
-    <h1>Eternity</h1>
+    <div id="header">
+        <div id="header-column">
+            <img id="logo" th:src="@{/media/logo.webp}"/>
+            <h1 id="text-logo">Eternity</h1>
+        </div>
+    </div>
+    <div id="main">
+        <div id="main-column">
+            <div id="menu">
+                <h3 class="menu-item">Create</h3>
+                <h3 class="menu-item">Search</h3>
+                <h3 class="menu-item">Readme</h3>
+            </div>
+        </div>
+    </div>
     <script type="application/javascript" th:src="@{/scripts/homepage.js}"></script>
 </body>
 </html>
