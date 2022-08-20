@@ -1,8 +1,8 @@
 package dev.yawkar.eternity.service;
 
+import dev.yawkar.eternity.persistence.exception.ThreadNotFoundException;
 import dev.yawkar.eternity.persistence.model.ThreadTopic;
 import dev.yawkar.eternity.persistence.repository.ThreadTopicRepository;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,5 +18,10 @@ public class ThreadTopicService {
 
     public List<ThreadTopic> get10TopicsSortedByMessagesNumber() {
         return repository.findTop10ByOrderByMessagesNumberDesc();
+    }
+
+    public ThreadTopic getThreadById(long threadId) {
+        return repository.findById(threadId)
+                .orElseThrow(() -> new ThreadNotFoundException("Thread with threadId=%d not found".formatted(threadId)));
     }
 }
