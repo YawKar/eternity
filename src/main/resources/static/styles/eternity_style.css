@@ -120,7 +120,7 @@ a, a:hover, a:focus, a:active {
     color: #000000;
 }
 
-#about-panel-title {
+.about-panel-title {
     text-align: center;
     width: 100%;
     background-color: #fafafa;
