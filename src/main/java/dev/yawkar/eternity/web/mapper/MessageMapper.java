@@ -1,7 +1,7 @@
 package dev.yawkar.eternity.web.mapper;
 
 import dev.yawkar.eternity.persistence.model.Message;
-import dev.yawkar.eternity.web.dto.MessageDTO;
+import dev.yawkar.eternity.web.dto.response.MessageDTO;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,7 +1,7 @@
 package dev.yawkar.eternity.web.mapper;
 
 import dev.yawkar.eternity.persistence.model.ThreadTopic;
-import dev.yawkar.eternity.web.dto.ThreadTopicDTO;
+import dev.yawkar.eternity.web.dto.response.ThreadTopicDTO;
 import org.springframework.stereotype.Component;
 
 @Component

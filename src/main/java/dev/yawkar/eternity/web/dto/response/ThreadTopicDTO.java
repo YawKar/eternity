@@ -1,18 +1,16 @@
-package dev.yawkar.eternity.web.dto;
+package dev.yawkar.eternity.web.dto.response;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
-import java.time.LocalDateTime;
-
 @Getter
 @Setter
 @Accessors(chain = true)
-public class NewsTopicDTO {
+public class ThreadTopicDTO {
 
     private long id;
     private String title;
     private String description;
-    private LocalDateTime timestamp;
+    private int messagesNumber;
 }

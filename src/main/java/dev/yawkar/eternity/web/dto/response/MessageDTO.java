@@ -1,4 +1,4 @@
-package dev.yawkar.eternity.web.dto;
+package dev.yawkar.eternity.web.dto.response;
 
 import lombok.Getter;
 import lombok.Setter;

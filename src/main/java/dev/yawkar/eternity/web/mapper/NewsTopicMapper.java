@@ -1,7 +1,7 @@
 package dev.yawkar.eternity.web.mapper;
 
 import dev.yawkar.eternity.persistence.model.NewsTopic;
-import dev.yawkar.eternity.web.dto.NewsTopicDTO;
+import dev.yawkar.eternity.web.dto.response.NewsTopicDTO;
 import org.springframework.stereotype.Component;
 
 @Component
