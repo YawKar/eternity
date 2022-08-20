@@ -15,7 +15,7 @@ public class MessageService {
         this.repository = repository;
     }
 
-    public List<Message> getAllMessagesByThreadId(long threadId) {
-        return repository.findAllByThreadId(threadId);
+    public List<Message> getAllMessagesByThreadIdSortedByIdAsc(long threadId) {
+        return repository.findAllByThreadIdOrderByIdAsc(threadId);
     }
 }
