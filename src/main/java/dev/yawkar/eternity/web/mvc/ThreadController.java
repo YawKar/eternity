@@ -1,6 +1,5 @@
 package dev.yawkar.eternity.web.mvc;
 
-import dev.yawkar.eternity.service.MessageService;
 import dev.yawkar.eternity.service.ThreadTopicService;
 import dev.yawkar.eternity.web.dto.response.MessageDTO;
 import dev.yawkar.eternity.web.dto.response.ThreadTopicDTO;
@@ -17,17 +16,14 @@ import java.util.List;
 public class ThreadController {
 
     private final ThreadTopicService threadService;
-    private final MessageService messageService;
     private final ThreadTopicMapper threadMapper;
     private final MessageMapper messageMapper;
 
     public ThreadController(
             ThreadTopicService threadService,
-            MessageService messageService,
             ThreadTopicMapper threadMapper,
             MessageMapper messageMapper) {
         this.threadService = threadService;
-        this.messageService = messageService;
         this.threadMapper = threadMapper;
         this.messageMapper = messageMapper;
     }
@@ -36,7 +32,7 @@ public class ThreadController {
     String openThread(@PathVariable long threadId, Model model) {
         ThreadTopicDTO threadTopic = threadMapper.toDTO(threadService.getThreadById(threadId));
         model.addAttribute("thread", threadTopic);
-        List<MessageDTO> messages = messageService.getAllMessagesByThreadIdSortedByIdAsc(threadId).stream().map(messageMapper::toDTO).toList();
+        List<MessageDTO> messages = threadService.getAllMessagesByThreadIdSortedByIdAsc(threadId).stream().map(messageMapper::toDTO).toList();
         model.addAttribute("messages", messages);
         return "thread_chat";
     }
