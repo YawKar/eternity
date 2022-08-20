@@ -8,7 +8,7 @@ public class ThreadNotFoundException extends EternityApplicationException {
         super();
     }
 
-    public ThreadNotFoundException(String message) {
-        super(message);
+    public ThreadNotFoundException(long threadId) {
+        super("Thread with threadId=%s not found".formatted(threadId));
     }
 }
