@@ -2,8 +2,8 @@ package dev.yawkar.eternity.web.mvc;
 
 import dev.yawkar.eternity.service.NewsTopicService;
 import dev.yawkar.eternity.service.ThreadTopicService;
-import dev.yawkar.eternity.web.dto.NewsTopicDTO;
-import dev.yawkar.eternity.web.dto.ThreadTopicDTO;
+import dev.yawkar.eternity.web.dto.response.NewsTopicDTO;
+import dev.yawkar.eternity.web.dto.response.ThreadTopicDTO;
 import dev.yawkar.eternity.web.mapper.NewsTopicMapper;
 import dev.yawkar.eternity.web.mapper.ThreadTopicMapper;
 import org.springframework.stereotype.Controller;
