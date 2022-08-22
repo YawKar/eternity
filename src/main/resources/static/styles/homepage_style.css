@@ -84,14 +84,6 @@ a, a:hover, a:focus, a:active {
     width: 50vw;
 }
 
-#about-panel {
-    margin-top: 2vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 30vw;
-}
-
 #news-panel {
     width: 50%;
     display: flex;
@@ -120,25 +112,11 @@ a, a:hover, a:focus, a:active {
     color: #000000;
 }
 
-.about-panel-title {
-    text-align: center;
-    width: 100%;
-    background-color: #fafafa;
-    color: #000000;
-}
-
 #news-topics-list {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#about-topics-list {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #fafafa;
 }
 
 .news-topic {
@@ -147,21 +125,12 @@ a, a:hover, a:focus, a:active {
     padding-bottom: 1vh;
 }
 
-.about-topic {
-    width: 100%;
-    padding-bottom: 1vh;
-    padding-left: 1vw;
-}
-
 .news-topic-title {
     margin-left: 1vw;
 }
 
 .news-topic-desc {
     margin-left: 1vw;
-}
-
-.about-topic-desc {
 }
 
 .news-topic-timestamp {
@@ -193,14 +162,4 @@ a, a:hover, a:focus, a:active {
 .thread-topic-messages {
     margin-left: 1vw;
     color: #9E9E9E
-}
-
-#tech-stack-list {
-    margin-left: 1vw;
-}
-
-#message-text-input {
-    width: 100%;
-    height: 10vh;
-    resize: none;
 }
