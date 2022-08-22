@@ -40,4 +40,8 @@ public class ThreadTopicService {
         }
         messageRepository.save(newMessage);
     }
+
+    public long countMessagesInThread(long threadId) {
+        return messageRepository.countAllByThreadId(threadId);
+    }
 }

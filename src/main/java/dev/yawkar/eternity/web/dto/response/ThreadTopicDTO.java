@@ -12,5 +12,5 @@ public class ThreadTopicDTO {
     private long id;
     private String title;
     private String description;
-    private int messagesNumber;
+    private long messagesNumber;
 }
