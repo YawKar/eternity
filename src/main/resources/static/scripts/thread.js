@@ -21,7 +21,10 @@ document.getElementById("message-text-input").onkeydown = function (e) {
                 "text" : messageTextInput.value,
                 "thread_id" : Number.parseInt(threadId)
             }));
-            messageTextInput.value = "";
+            request.onload = () => {
+                window.location.reload();
+                messageTextInput.value = null;
+            };
         }
     }
 };
