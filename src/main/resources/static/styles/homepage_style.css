@@ -157,9 +157,12 @@ a, a:hover, a:focus, a:active {
 
 .thread-topic-desc {
     margin-left: 1vw;
+    font-size: 18px;
+    word-wrap: break-word;
 }
 
 .thread-topic-messages {
     margin-left: 1vw;
-    color: #9E9E9E
+    color: #9E9E9E;
+    font-size: 18px;
 }
