@@ -18,6 +18,7 @@ public class NewsTopic {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String title;
+    @Column(length = 2500)
     private String description;
     private LocalDateTime timestamp;
 }
