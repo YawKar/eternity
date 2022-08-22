@@ -11,7 +11,6 @@ public class ThreadTopicMapper {
         return new ThreadTopicDTO()
                 .setId(threadTopic.getId())
                 .setTitle(threadTopic.getTitle())
-                .setDescription(threadTopic.getDescription())
-                .setMessagesNumber(threadTopic.getMessagesNumber());
+                .setDescription(threadTopic.getDescription());
     }
 }
