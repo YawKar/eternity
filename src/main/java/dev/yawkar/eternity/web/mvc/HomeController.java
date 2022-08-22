@@ -35,7 +35,7 @@ public class HomeController {
     String homePage(Model model) {
         List<NewsTopicDTO> newsTopics = newsTopicService.getAllNewsSortedByTime().stream().map(newsMapper::toDTO).toList();
         model.addAttribute("newsTopics", newsTopics);
-        List<ThreadTopicDTO> threadTopics = threadTopicService.get10TopicsSortedByMessagesNumber().stream().map(threadMapper::toDTO).toList();
+        List<ThreadTopicDTO> threadTopics = threadTopicService.getAllThreads().stream().map(threadMapper::toDTO).toList();
         model.addAttribute("popularThreads", threadTopics);
         return "homepage";
     }
