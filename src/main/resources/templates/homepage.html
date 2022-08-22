@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Eternity</title>
-    <link rel="stylesheet" th:href="@{/styles/eternity_style.css}"/>
+    <link rel="stylesheet" th:href="@{/styles/shared_style.css}"/>
+    <link rel="stylesheet" th:href="@{/styles/homepage_style.css}"/>
 </head>
 <body>
     <div id="header">
@@ -33,11 +34,13 @@
                 <div id="popular-panel">
                     <h2 id="popular-panel-title">popular threads</h2>
                     <div id="thread-topics-list" th:each="thread : ${popularThreads}">
-                        <div class="thread-topic">
-                            <h2 class="thread-topic-title" th:text="${thread.title}"></h2>
-                            <p class="thread-topic-desc" th:text="${thread.description}"></p>
-                            <p class="thread-topic-messages" th:text="'Messages: ' + ${thread.messagesNumber}"></p>
-                        </div>
+                        <a th:href="@{/thread/{threadId}(threadId=${thread.id})}">
+                            <div class="thread-topic">
+                                <h2 class="thread-topic-title" th:text="${thread.title}"></h2>
+                                <p class="thread-topic-desc" th:text="${thread.description}"></p>
+                                <p class="thread-topic-messages" th:text="'Messages: ' + ${thread.messagesNumber}"></p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
