@@ -22,8 +22,8 @@ public class ThreadTopicService {
         this.messageRepository = messageRepository;
     }
 
-    public List<ThreadTopic> get10TopicsSortedByMessagesNumber() {
-        return threadRepository.findTop10ByOrderByMessagesNumberDesc();
+    public List<ThreadTopic> getAllThreads() {
+        return threadRepository.findAll();
     }
 
     public ThreadTopic getThreadById(long threadId) {
@@ -39,5 +39,9 @@ public class ThreadTopicService {
             throw new ThreadNotFoundException(newMessage.getThreadId());
         }
         messageRepository.save(newMessage);
+    }
+
+    public long countMessagesInThread(long threadId) {
+        return messageRepository.countAllByThreadId(threadId);
     }
 }

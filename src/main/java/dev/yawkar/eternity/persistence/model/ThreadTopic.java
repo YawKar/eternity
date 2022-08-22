@@ -18,6 +18,4 @@ public class ThreadTopic {
     private long id;
     private String title;
     private String description;
-    @Column(name = "messages_number")
-    private int messagesNumber;
 }
