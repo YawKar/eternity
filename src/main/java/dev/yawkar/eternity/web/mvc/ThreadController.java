@@ -31,6 +31,7 @@ public class ThreadController {
     @GetMapping("/thread/{threadId}")
     String openThread(@PathVariable long threadId, Model model) {
         ThreadTopicDTO threadTopic = threadMapper.toDTO(threadService.getThreadById(threadId));
+        threadTopic.setMessagesNumber(threadService.countMessagesInThread(threadId));
         model.addAttribute("thread", threadTopic);
         List<MessageDTO> messages = threadService.getAllMessagesByThreadIdSortedByIdAsc(threadId).stream().map(messageMapper::toDTO).toList();
         model.addAttribute("messages", messages);
@@ -40,6 +41,7 @@ public class ThreadController {
     @GetMapping("/thread/{threadId}/info")
     String openThreadInfo(@PathVariable long threadId, Model model) {
         ThreadTopicDTO threadTopic = threadMapper.toDTO(threadService.getThreadById(threadId));
+        threadTopic.setMessagesNumber(threadService.countMessagesInThread(threadId));
         model.addAttribute("thread", threadTopic);
         return "thread_info";
     }
