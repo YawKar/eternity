@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title th:text="${thread.getTitle()}"></title>
-    <link rel="stylesheet" th:href="@{/styles/eternity_style.css}"/>
+    <link rel="stylesheet" th:href="@{/styles/thread_chat_style.css}"/>
 </head>
 <body>
 <div id="header">
@@ -22,17 +22,17 @@
             <h2 class="menu-item"><a th:href="@{/thread/{threadId}(threadId=${thread.getId()})}">chat</a></h2>
             <h2 class="menu-item"><a th:href="@{/thread/{threadId}/info(threadId=${thread.getId()})}">info</a></h2>
         </div>
-        <div id="about-panel">
-            <h2 class="about-panel-title" th:text="${thread.getTitle()}"></h2>
-            <div class="about-topics-list" th:each="message : ${messages}">
-                <div class="about-topic">
-                    <h3 class="about-topic-title" th:text="'#' + ${message.getId()} + ' ' + ${message.getTimestamp()}"></h3>
-                    <p class="about-topic-desc" th:text="'> ' + ${message.getText()}"></p>
+        <div id="chat-panel">
+            <h2 class="chat-panel-title" th:text="${thread.getTitle()}"></h2>
+            <div class="messages-list" th:each="message : ${messages}">
+                <div class="message">
+                    <h3 class="message-info" th:text="'#' + ${message.getId()} + ' ' + ${message.getTimestamp()}"></h3>
+                    <p class="message-text" th:text="'> ' + ${message.getText()}"></p>
                 </div>
             </div>
-            <h2 class="about-panel-title">post message</h2>
+            <h2 class="chat-panel-title">post message</h2>
             <div class="post-message-block">
-                <input id="message-text-input" type="text" maxlength="800" name="text" placeholder="your message..."/>
+                <textarea id="message-text-input" maxlength="800" name="text" placeholder="your message..."></textarea>
             </div>
         </div>
     </div>
