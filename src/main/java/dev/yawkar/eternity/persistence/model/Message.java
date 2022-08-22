@@ -19,6 +19,7 @@ public class Message {
     private long id;
     @Column(name = "thread_id")
     private long threadId;
+    @Column(length = 800)
     private String text;
     private LocalDateTime timestamp;
 }
