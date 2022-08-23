@@ -1,6 +1,10 @@
 # Eternity
 Anonymous thread-based online social platform (I took inspiration from 2ch.hk)
 
+![Project stage: Development][project-stage-badge: Development]
+
+[project-stage-badge: Development]: https://img.shields.io/badge/Project%20Stage-Development-yellowgreen.svg
+
 ## Table of Contents
 * [How to run](#how-to-run)
 * [Endpoints](#endpoints)
