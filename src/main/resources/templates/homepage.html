@@ -34,12 +34,10 @@
                 <div id="popular-panel">
                     <h2 id="popular-panel-title">popular threads</h2>
                     <div id="thread-topics-list" th:each="thread : ${popularThreads}">
-                        <a th:href="@{/thread/{threadId}(threadId=${thread.id})}">
-                            <div class="thread-topic">
-                                <h2 class="thread-topic-title" th:text="${thread.title}"></h2>
-                                <p class="thread-topic-desc" th:text="${thread.description}"></p>
-                                <p class="thread-topic-messages" th:text="'Messages: ' + ${thread.messagesNumber}"></p>
-                            </div>
+                        <a class="thread-topic" th:href="@{/thread/{threadId}(threadId=${thread.id})}">
+                            <h2 class="thread-topic-title" th:text="${thread.title}"></h2>
+                            <p class="thread-topic-desc" th:text="${thread.description}"></p>
+                            <p class="thread-topic-messages" th:text="'Messages: ' + ${thread.messagesNumber}"></p>
                         </a>
                     </div>
                 </div>
