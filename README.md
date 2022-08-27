@@ -13,7 +13,6 @@ Anonymous thread-based online social platform (I took inspiration from 2ch.hk)
 
 ## How to run
 ```bash
-chmod +x mvnw                     # allow executing maven wrapper
 ./mvnw clean                      # clean /target (if it's not the first run)
 ./mvnw package -Dmaven.test.skip  # build .jar (and skip testing)
 docker compose up                 # run postgres db in container
