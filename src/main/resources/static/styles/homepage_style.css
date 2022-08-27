@@ -49,10 +49,12 @@
 
 .news-topic-title {
     margin-left: 1vw;
+    word-wrap: break-word;
 }
 
 .news-topic-desc {
     margin-left: 1vw;
+    word-wrap: break-word;
 }
 
 .news-topic-timestamp {
@@ -75,6 +77,7 @@
 
 .thread-topic-title {
     margin-left: 1vw;
+    word-wrap: break-word;
 }
 
 .thread-topic-desc {
