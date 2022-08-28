@@ -22,6 +22,7 @@ java -jar target/*.jar            # run application (in the near future it will 
 ## Endpoints
 | URL                 | Method |                             Description                             |
 |:--------------------|:------:|:-------------------------------------------------------------------:|
+| `/ui-docs`          | `GET`  |                    Swagger UI API documentation                     |
 | `/`                 | `GET`  |    Home page with news, popular threads and menu navigation bar     |
 | `/readme`           | `GET`  |            Readme page with some info about the project             |
 | `/thread/{id}`      | `GET`  | Thread page with chat, input textarea and navigation bar at the top |
@@ -57,6 +58,7 @@ java -jar target/*.jar            # run application (in the near future it will 
 ![java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Thymeleaf](https://img.shields.io/badge/Thymeleaf-%23005C0F.svg?style=for-the-badge&logo=Thymeleaf&logoColor=white)
+![swagger](https://img.shields.io/badge/swagger-%2385EA2D.svg?&style=for-the-badge&logo=swagger&logoColor=white)
 ![spring](https://img.shields.io/badge/spring%20-%236DB33F.svg?&style=for-the-badge&logo=spring&logoColor=white)
 ![Spring Boot](https://img.shields.io/static/v1?style=for-the-badge&message=Spring+Boot&color=6DB33F&logo=Spring+Boot&logoColor=FFFFFF&label=)
 ![Spring Data](https://img.shields.io/static/v1?style=for-the-badge&message=Spring+Data&color=6DB33F&logo=Spring+Data&logoColor=FFFFFF&label=)
@@ -70,6 +72,8 @@ java -jar target/*.jar            # run application (in the near future it will 
     * Spring Data JPA
     * Spring Boot Starter Validation
     * Spring Boot Starter Web
+    * SpringDoc OpenAPI UI
+* Swagger 
 * PostgreSQL 14
 * Lombok
 * Thymeleaf
