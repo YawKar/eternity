@@ -44,4 +44,8 @@ public class ThreadTopicService {
     public long countMessagesInThread(long threadId) {
         return messageRepository.countAllByThreadId(threadId);
     }
+
+    public List<ThreadTopic> getTop10ThreadByMessagesLastWeek() {
+        return threadRepository.findTop10ThreadByMessagesLastWeek();
+    }
 }
