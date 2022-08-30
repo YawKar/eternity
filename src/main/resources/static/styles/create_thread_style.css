@@ -1,0 +1,72 @@
+#make-thread-panel {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30vw;
+}
+
+.make-thread-panel-title {
+    text-align: center;
+    width: 100%;
+    background-color: #fafafa;
+    color: #000000;
+}
+
+.post-input-part {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-part-label {
+    white-space: nowrap;
+}
+
+.post-make-thread-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-input {
+    width: 100%;
+    font-size: 16px;
+    resize: none;
+    background-color: black;
+    color: #fafafa;
+    border: 0px solid #fafafa;
+}
+
+td {
+    vertical-align: top;
+}
+
+#thread-title {
+    height: 26px;
+}
+
+#thread-desc {
+    height: 70px;
+    resize: vertical;
+}
+
+#create-thread-send {
+    margin-top: 3px;
+    line-height: 21px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #fafafa;
+    color: #000000;
+    width: fit-content;
+    font-size: 20px;
+}
+
+#create-thread-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+*:focus {
+    outline: none;
+}

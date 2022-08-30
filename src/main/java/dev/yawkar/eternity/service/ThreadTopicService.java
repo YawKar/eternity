@@ -26,6 +26,10 @@ public class ThreadTopicService {
         return threadRepository.findAll();
     }
 
+    public ThreadTopic addNewThreadTopic(ThreadTopic newThread) {
+        return threadRepository.save(newThread);
+    }
+
     public ThreadTopic getThreadById(long threadId) {
         return threadRepository.findById(threadId).orElseThrow(() -> new ThreadNotFoundException(threadId));
     }
