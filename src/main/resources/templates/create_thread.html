@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create thread</title>
+    <link rel="stylesheet" th:href="@{/styles/shared_style.css}"/>
+    <link rel="stylesheet" th:href="@{/styles/create_thread_style.css}"/>
+</head>
+<body>
+<div id="header">
+    <div id="header-column">
+        <a th:href="@{/}"><img id="logo" th:src="@{/media/logo.webp}" alt="eternity_logo"/></a>
+        <h1 id="text-logo">Eternity</h1>
+    </div>
+</div>
+<div id="main">
+    <div id="main-column">
+        <div id="menu">
+            <h2 class="menu-item"><a th:href="@{/create}">create</a></h2>
+            <h2 class="menu-item"><a th:href="@{/}">search</a></h2>
+            <h2 class="menu-item"><a th:href="@{/readme}">readme</a></h2>
+        </div>
+        <div id="make-thread-panel">
+            <h2 class="make-thread-panel-title">create thread</h2>
+            <div class="post-make-thread-block">
+                <table style="width: 100%">
+                    <tr>
+                        <td><h3 class="input-part-label">% title ></h3></td>
+                        <td><textarea class="text-input" id="thread-title" maxlength="255" name="text" placeholder="thread title..."></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><h3 class="input-part-label">% description ></h3></td>
+                        <td><textarea class="text-input" id="thread-desc" maxlength="800" name="text" placeholder="thread description..."></textarea></td>
+                    </tr>
+                </table>
+                <div id="create-thread-div">
+                    <span><b style="font-size: 21px">【</b></span>
+                    <h3 class="input-part-label" id="create-thread-send">create</h3>
+                    <span><b style="font-size: 21px">】</b></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script th:src="@{/scripts/create_thread.js}"></script>
+</body>
+</html>
