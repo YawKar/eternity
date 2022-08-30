@@ -28,6 +28,7 @@ java -jar target/*.jar            # run application (in the near future it will 
 | `/thread/{id}`      | `GET`  | Thread page with chat, input textarea and navigation bar at the top |
 | `/thread/{id}/info` | `GET`  |       Info page with statistical data about the opened thread       |
 | `/api/v1/messages`  | `POST` |                API endpoint for posting new messages                |
+| `/api/v1/threads`   | `POST` |                API endpoint for creating new threads                |
 
 ## Database entities
 ### Messages (`messages`)
