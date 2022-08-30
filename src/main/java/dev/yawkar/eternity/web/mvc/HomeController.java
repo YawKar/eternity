@@ -47,4 +47,9 @@ public class HomeController {
     String readmePage() {
         return "readme";
     }
+
+    @GetMapping("/create")
+    String createThreadPage() {
+        return "create_thread";
+    }
 }
