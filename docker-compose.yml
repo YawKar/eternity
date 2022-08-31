@@ -1,12 +1,25 @@
 version: '2'
 
 services:
+  eternity:
+    container_name: eternity_app
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://eternity_postgres:5432/eternity_db
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create
+    depends_on:
+      - postgres
+
   postgres:
-    container_name: postgres
+    container_name: eternity_postgres
     image: postgres:14-alpine
     environment:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=eternity_db
-    ports:
-      - "5432:5432"
