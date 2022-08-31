@@ -31,9 +31,8 @@ public class MessagesController {
     }
 
     @Operation(summary = "Post new message to the thread by threadId")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Posted the message"),
-            @ApiResponse(responseCode = "404", description = "Thread not found")})
+    @ApiResponse(responseCode = "200", description = "Posted the message")
+    @ApiResponse(responseCode = "404", description = "Thread not found")
     @PostMapping
     void postNewMessage(@RequestBody @Valid NewMessageDTO newMessage) {
         threadService.addMessageToThread(messageMapper.toEntity(newMessage));
