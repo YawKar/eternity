@@ -15,8 +15,7 @@ Anonymous thread-based online social platform (I took inspiration from 2ch.hk)
 ```bash
 ./mvnw clean                      # clean /target (if it's not the first run)
 ./mvnw package -Dmaven.test.skip  # build .jar (and skip testing)
-docker compose up                 # run postgres db in container
-java -jar target/*.jar            # run application (in the near future it will be containerized)
+docker compose up                 # run docker composition
 ```
 
 ## Endpoints
