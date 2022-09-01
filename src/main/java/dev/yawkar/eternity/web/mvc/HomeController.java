@@ -52,4 +52,9 @@ public class HomeController {
     String createThreadPage() {
         return "create_thread";
     }
+
+    @GetMapping("/search")
+    String searchPage() {
+        return "search";
+    }
 }
