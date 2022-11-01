@@ -2,16 +2,14 @@ package dev.yawkar.eternity.web.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import lombok.experimental.Accessors;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Schema(description = "New message model")
-@Getter
-@Setter
+@Data
 @Accessors(chain = true)
 public class NewMessageDTO {
 

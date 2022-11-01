@@ -6,12 +6,14 @@ import dev.yawkar.eternity.web.dto.response.NewsTopicDTO;
 import dev.yawkar.eternity.web.dto.response.ThreadTopicDTO;
 import dev.yawkar.eternity.web.mapper.NewsTopicMapper;
 import dev.yawkar.eternity.web.mapper.ThreadTopicMapper;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
+@AllArgsConstructor
 @Controller
 public class HomeController {
 
@@ -19,17 +21,6 @@ public class HomeController {
     private final ThreadTopicService threadTopicService;
     private final NewsTopicMapper newsMapper;
     private final ThreadTopicMapper threadMapper;
-
-    public HomeController(
-            NewsTopicService newsTopicService,
-            ThreadTopicService threadTopicService,
-            NewsTopicMapper newsMapper,
-            ThreadTopicMapper threadMapper) {
-        this.newsTopicService = newsTopicService;
-        this.threadTopicService = threadTopicService;
-        this.newsMapper = newsMapper;
-        this.threadMapper = threadMapper;
-    }
 
     @GetMapping
     String homePage(Model model) {

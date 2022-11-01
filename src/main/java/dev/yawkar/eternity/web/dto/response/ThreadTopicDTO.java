@@ -1,11 +1,9 @@
 package dev.yawkar.eternity.web.dto.response;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import lombok.experimental.Accessors;
 
-@Getter
-@Setter
+@Data
 @Accessors(chain = true)
 public class ThreadTopicDTO {
 
