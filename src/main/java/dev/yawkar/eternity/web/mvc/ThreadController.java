@@ -5,6 +5,7 @@ import dev.yawkar.eternity.web.dto.response.MessageDTO;
 import dev.yawkar.eternity.web.dto.response.ThreadTopicDTO;
 import dev.yawkar.eternity.web.mapper.MessageMapper;
 import dev.yawkar.eternity.web.mapper.ThreadTopicMapper;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,21 +13,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
+@AllArgsConstructor
 @Controller
 public class ThreadController {
 
     private final ThreadTopicService threadService;
     private final ThreadTopicMapper threadMapper;
     private final MessageMapper messageMapper;
-
-    public ThreadController(
-            ThreadTopicService threadService,
-            ThreadTopicMapper threadMapper,
-            MessageMapper messageMapper) {
-        this.threadService = threadService;
-        this.threadMapper = threadMapper;
-        this.messageMapper = messageMapper;
-    }
 
     @GetMapping("/thread/{threadId}")
     String openThread(@PathVariable long threadId, Model model) {

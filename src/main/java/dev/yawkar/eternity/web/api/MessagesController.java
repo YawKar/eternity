@@ -5,8 +5,8 @@ import dev.yawkar.eternity.web.dto.request.NewMessageDTO;
 import dev.yawkar.eternity.web.mapper.MessageMapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,20 +15,13 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @Tag(name = "Messages controller", description = "Contains endpoints for managing messages")
+@AllArgsConstructor
 @RestController
 @RequestMapping("/api/v1/messages")
 public class MessagesController {
 
     private final ThreadTopicService threadService;
     private final MessageMapper messageMapper;
-
-
-    public MessagesController(
-            ThreadTopicService threadService,
-            MessageMapper messageMapper) {
-        this.threadService = threadService;
-        this.messageMapper = messageMapper;
-    }
 
     @Operation(summary = "Post new message to the thread by threadId")
     @ApiResponse(responseCode = "200", description = "Posted the message")

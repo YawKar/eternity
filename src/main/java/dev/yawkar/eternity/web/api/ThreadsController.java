@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,17 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @Tag(name = "Threads controller", description = "Contains endpoints for managing threads")
+@AllArgsConstructor
 @RestController
 @RequestMapping("/api/v1/threads")
 public class ThreadsController {
 
     private final ThreadTopicService threadService;
     private final ThreadTopicMapper threadMapper;
-
-    public ThreadsController(ThreadTopicService threadService, ThreadTopicMapper threadMapper) {
-        this.threadService = threadService;
-        this.threadMapper = threadMapper;
-    }
 
     @Operation(summary = "Create thread")
     @ApiResponse(responseCode = "200", description = "Successfully created new thread",
